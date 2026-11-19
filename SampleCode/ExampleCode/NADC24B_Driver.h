@@ -18,7 +18,7 @@
 // Use SPIx Port
 //------------------------------------------------------------------------------
 #define SPI_PORT                                SPI0
-#define nDRDY                                   PA4
+#define nDRDY                                   PB5
 
 #define ADOUT_DIG18_2                           PH3
 #define ADOUT_DIG18_1                           PH4

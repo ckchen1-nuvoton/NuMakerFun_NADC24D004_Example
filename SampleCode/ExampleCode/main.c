@@ -139,14 +139,14 @@ int main(void)
 
     /* Init SPI */
     SPI_Init();
+  
+    /* IO Interrupt */
+    GPIO_EnableInt(PB, 5, GPIO_INT_FALLING);
+    NVIC_EnableIRQ(GPB_IRQn);
 
     /* Initial NADC24B */
 		Reset_NADC24B();
     NADC24B_Cali_and_Initial();
-		
-    /* IO Interrupt */
-    GPIO_EnableInt(PB, 5, GPIO_INT_FALLING);
-    NVIC_EnableIRQ(GPB_IRQn);
 
     /* Print */
     printf("This example for NuMakerFun_NADC24D004.\n");
